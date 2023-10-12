@@ -33,8 +33,12 @@
 ExportedObj/
 .consulo/
 *.csproj
+# Exempt project files.
+!Assembly-CSharp.csproj
+!Assembly-CSharp-Editor.csproj
 *.unityproj
 *.sln
+!stockfoto.sln
 *.suo
 *.tmp
 *.user
