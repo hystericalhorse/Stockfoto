@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -82,11 +83,7 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case State.PAUSE_GAME:
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                Time.timeScale = 0;
-                pauseUI.MakeActive();
-                controlsUI.MakeInactive();
+                //EventSystem.current.isFocused;
                 break;
             default:
                 break;
@@ -101,14 +98,28 @@ public class GameManager : MonoBehaviour
     public void SetPause()
     {
         state = State.PAUSE_GAME;
-    }
+
+		pauseUI.MakeActive();
+		controlsUI.MakeActive();
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+        Time.timeScale = Mathf.Epsilon;
+	}
 
     public void ResumeGame()
     {
         state = State.PLAY_GAME;
         Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+		Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+		pauseUI.MakeInactive();
+		controlsUI.MakeInactive();
+	}
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     [Serializable]
@@ -116,18 +127,21 @@ public class GameManager : MonoBehaviour
     {
         public GameObject parentObject;
         public GameObject defaultSelect;
+        public bool setDefault;
 
         public void MakeActive()
         {
             if (parentObject is null) return;
+
             parentObject.SetActive(true);
-            if (defaultSelect is null)
+            if (defaultSelect is not null && setDefault)
                 EventSystem.current.SetSelectedGameObject(defaultSelect);
         }
 
         public void MakeInactive()
         {
 			if (parentObject is null) return;
+
 			parentObject.SetActive(false);
 		}
     }
