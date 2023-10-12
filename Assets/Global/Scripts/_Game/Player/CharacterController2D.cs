@@ -30,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
 
 		rb.freezeRotation = true;
 		rb.gravityScale = 0;
+
+		
 	}
 
 	private void FixedUpdate()
@@ -101,6 +103,11 @@ public class CharacterController2D : MonoBehaviour
 		if (jumping) return;
 		jumping = true;
 		_translation.y = 3;
+	}
+
+	public void Pause(InputAction.CallbackContext context)
+	{
+		GameManager.gameManager.SetPause();
 	}
 
 	#endregion

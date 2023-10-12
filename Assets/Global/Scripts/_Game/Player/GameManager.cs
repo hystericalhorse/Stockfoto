@@ -1,13 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject titleUI;
-    [SerializeField] GameObject gameWinUI;
-    [SerializeField] GameObject pauseUI;
-    [SerializeField] GameObject controlsUI;
+    public static GameManager gameManager;
+
+    [SerializeField] SubMenu titleUI;
+    [SerializeField] SubMenu gameWinUI;
+    [SerializeField] SubMenu pauseUI;
+    [SerializeField] SubMenu controlsUI;
+
     //[SerializeField] AudioSource gameMusic;
     //[SerializeField] AudioSource playerJump;
 
@@ -24,7 +30,22 @@ public class GameManager : MonoBehaviour
     float stateTimer = 0;
     public float timer = 0;
 
-    private void Start()
+	private void Awake()
+	{
+        if (gameManager != null && gameManager != this)
+        {
+            Destroy(this);
+            return;
+        }
+        else
+        {
+            gameManager = this;
+        }
+
+        DontDestroyOnLoad(gameObject);
+	}
+
+	private void Start()
     {
         timer = 0;
     }
@@ -34,14 +55,14 @@ public class GameManager : MonoBehaviour
         switch (state)
         { 
             case State.TITLE:
-                titleUI.SetActive(true);
+                titleUI.MakeActive();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 //gameMusic.Stop();
                 break;
             case State.START_GAME:
                 Cursor.lockState = CursorLockMode.Locked;
-                titleUI.SetActive(false);
+                titleUI.MakeInactive();
                 //gameMusic.Play();
                 state = State.PLAY_GAME;
                 break;
@@ -56,7 +77,7 @@ public class GameManager : MonoBehaviour
                 stateTimer -= Time.deltaTime;
                 if (stateTimer <= 0)
                 {
-                    gameWinUI.SetActive(false);
+                    gameWinUI.MakeActive();
                     state = State.TITLE;
                 }
                 break;
@@ -64,8 +85,8 @@ public class GameManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0;
-                pauseUI.SetActive(true);
-                controlsUI.SetActive(false);
+                pauseUI.MakeActive();
+                controlsUI.MakeInactive();
                 break;
             default:
                 break;
@@ -88,5 +109,26 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    [Serializable]
+    public struct SubMenu
+    {
+        public GameObject parentObject;
+        public GameObject defaultSelect;
+
+        public void MakeActive()
+        {
+            if (parentObject is null) return;
+            parentObject.SetActive(true);
+            if (defaultSelect is null)
+                EventSystem.current.SetSelectedGameObject(defaultSelect);
+        }
+
+        public void MakeInactive()
+        {
+			if (parentObject is null) return;
+			parentObject.SetActive(false);
+		}
     }
 }

@@ -2358,10 +2358,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 0.703504, g: 1, b: 0.9191375, a: 1}
+    m_PressedColor: {r: 0.58790624, g: 0.754717, b: 0.70862454, a: 1}
+    m_SelectedColor: {r: 0.7019608, g: 1, b: 0.9176471, a: 1}
+    m_DisabledColor: {r: 0.7075472, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2536,10 +2536,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6f27dd00a40e34e8a3636d8522e1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleUI: {fileID: 1756323936}
-  gameWinUI: {fileID: 573324640}
-  pauseUI: {fileID: 1449622336}
-  controlsUI: {fileID: 1290258410}
+  titleUI:
+    parentObject: {fileID: 1756323936}
+    defaultSelect: {fileID: 1425915764}
+  gameWinUI:
+    parentObject: {fileID: 573324640}
+    defaultSelect: {fileID: 0}
+  pauseUI:
+    parentObject: {fileID: 1449622336}
+    defaultSelect: {fileID: 0}
+  controlsUI:
+    parentObject: {fileID: 1290258410}
+    defaultSelect: {fileID: 0}
   state: 0
   timer: 0
 --- !u!4 &1458831754
@@ -2551,7 +2559,7 @@ Transform:
   m_GameObject: {fileID: 1458831752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6130241, y: 5.04138, z: -0.0741592}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2910,9 +2918,9 @@ SceneRoots:
   - {fileID: 254533731}
   - {fileID: 64166045}
   - {fileID: 519420032}
+  - {fileID: 1458831754}
   - {fileID: 619394802}
   - {fileID: 1283268239}
   - {fileID: 443731514}
   - {fileID: 1145253451}
   - {fileID: 538687489}
-  - {fileID: 1458831754}
