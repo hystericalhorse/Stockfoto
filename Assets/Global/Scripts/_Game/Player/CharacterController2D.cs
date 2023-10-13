@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Animations;
 using UnityEngine.InputSystem;
 
 /// <summary>
@@ -12,6 +13,9 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] PlayerInput input;
     [SerializeField] CapsuleCollider2D col;
+    [SerializeField] SpriteRenderer spr;
+	[SerializeField] Animator anim;
+	
 	[SerializeField] LayerMask controllerLayer;
 
 	Vector2 _input = Vector2.zero;
@@ -36,16 +40,18 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Update()
 	{
-		GroundCheck();
+		
 	}
 
 	private void FixedUpdate()
 	{
-		 // First
+		GroundCheck(); // First
 
 		// TODO: Literally the rest of the character controller haha.
 		CalculateVerticalMotion();
 		CalculateHorizontalMotion();
+
+		anim.SetFloat("vel", Mathf.Abs(_translation.x));
 
 		ApplyMotion(); // Last
 	}
@@ -61,8 +67,10 @@ public class CharacterController2D : MonoBehaviour
 	/// </summary>
 	private void GroundCheck()
 	{
-		bool hitOnGround = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.down, 0.05f, ~controllerLayer);
-		Debug.DrawRay(col.bounds.center, Vector2.down * 0.05f, Color.red);
+		anim.SetBool("grounded", onGround);
+
+		bool hitOnGround = Physics2D.CapsuleCast(col.bounds.center, col.size, col.direction, 0, Vector2.down, 0.02f, ~controllerLayer);
+		Debug.DrawRay(col.bounds.center, Vector2.down * 0.02f, Color.red);
 
 		//
 		// Additional code may be put here to handle coyote time, double jumping, and other things.
@@ -70,12 +78,14 @@ public class CharacterController2D : MonoBehaviour
 
 		if (_translation.y > 0 && jumping)
 		{
-			onGround = false; return;
+			onGround = false;
+			return;
 		}
 
 		onGround = hitOnGround;
 
 		if (onGround) jumping = false;
+
 	}
 
 	private void CalculateVerticalMotion()
@@ -100,6 +110,9 @@ public class CharacterController2D : MonoBehaviour
 	public void Move(InputAction.CallbackContext context)
 	{
 		_input = context.ReadValue<Vector2>();
+
+		if (_input.x > 0 && spr.flipX) spr.flipX = false;
+		if (_input.x < 0 && !spr.flipX) spr.flipX = true;
 	}
 
 	public void Jump(InputAction.CallbackContext context)
@@ -107,6 +120,7 @@ public class CharacterController2D : MonoBehaviour
 		//TODO
 		if (jumping) return;
 		jumping = true;
+		anim.SetTrigger("onJump");
 		_translation.y = 3;
 	}
 
