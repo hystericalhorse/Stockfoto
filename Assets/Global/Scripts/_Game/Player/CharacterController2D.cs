@@ -34,9 +34,14 @@ public class CharacterController2D : MonoBehaviour
 		
 	}
 
+	private void Update()
+	{
+		GroundCheck();
+	}
+
 	private void FixedUpdate()
 	{
-		GroundCheck(); // First
+		 // First
 
 		// TODO: Literally the rest of the character controller haha.
 		CalculateVerticalMotion();

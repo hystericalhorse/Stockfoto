@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             case State.START_GAME:
                 Cursor.lockState = CursorLockMode.Locked;
                 titleUI.MakeInactive();
+                controlsUI.MakeInactive();
                 //gameMusic.Play();
                 state = State.PLAY_GAME;
                 break;
