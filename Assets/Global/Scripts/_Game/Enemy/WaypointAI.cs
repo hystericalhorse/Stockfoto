@@ -12,9 +12,9 @@ public class WaypointAI : MonoBehaviour {
     [SerializeField] Transform[] Waypoints;
 
     Rigidbody2D RB;
-    Vector2 Velocity = Vector2.zero;
+    public Vector2 Velocity = Vector2.zero;
     bool FaceRight = true;
-    Transform TargetWaypoint = null;
+    public Transform TargetWaypoint = null;
     float Timer = .01f;
 
     bool alive = true;
@@ -23,6 +23,9 @@ public class WaypointAI : MonoBehaviour {
         RB = GetComponent<Rigidbody2D>();
         spriterenderer = GetComponent<SpriteRenderer>();
         alive = true;
+
+        RB.drag = 0;
+        RB.gravityScale = 0;
     }
 
     void Update() {
