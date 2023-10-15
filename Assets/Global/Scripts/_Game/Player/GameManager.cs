@@ -1,16 +1,15 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
     [SerializeField] SubMenu titleUI;
+    [SerializeField] SubMenu playerHUD;
     [SerializeField] SubMenu gameWinUI;
     [SerializeField] SubMenu gameLoseUI;
     [SerializeField] SubMenu pauseUI;
@@ -75,6 +74,7 @@ public class GameManager : MonoBehaviour
                 state = State.PLAY_GAME;
                 break;
             case State.PLAY_GAME:
+                playerHUD.MakeActive();
                 //if (Input.GetKeyDown(KeyCode.Tab))
                 //{
                 //    SetPause();
@@ -103,15 +103,16 @@ public class GameManager : MonoBehaviour
 	public void ResetGame()
 	{
 		//TODO
+		SceneManager.LoadScene("Level1");
 
-		gameLoseUI.MakeInactive();
-		pauseUI.MakeInactive();
-		controlsUI.MakeInactive();
-		titleUI.MakeInactive();
-
-		Time.timeScale = 1;
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
+		//gameLoseUI.MakeInactive();
+		//pauseUI.MakeInactive();
+		//controlsUI.MakeInactive();
+		//titleUI.MakeInactive();
+        //
+		//Time.timeScale = 1;
+		//Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.visible = false;
 	}
 
 	public void StartGame()
@@ -126,6 +127,7 @@ public class GameManager : MonoBehaviour
 
 		pauseUI.MakeActive();
 		controlsUI.MakeActive();
+		playerHUD.MakeInactive();
 
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
@@ -142,6 +144,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
 		pauseUI.MakeInactive();
 		controlsUI.MakeInactive();
+		playerHUD.MakeActive();
 
 		music.UnPause();
 	}
@@ -154,6 +157,7 @@ public class GameManager : MonoBehaviour
 		Cursor.visible = true;
 		Time.timeScale = Mathf.Epsilon;
 
+		playerHUD.MakeInactive();
 		gameWinUI.MakeActive();
 	}
 
@@ -161,7 +165,8 @@ public class GameManager : MonoBehaviour
     {
         state = State.GAME_LOSE;
 
-        gameLoseUI.MakeActive();
+		playerHUD.MakeInactive();
+		gameLoseUI.MakeActive();
         music.Stop();
 
 		Cursor.lockState = CursorLockMode.None;

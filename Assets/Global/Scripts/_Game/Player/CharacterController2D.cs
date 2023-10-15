@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
@@ -26,6 +27,8 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] int coins;
 	[Space]
 	[SerializeField] GameObject projPrefab;
+	[Space]
+	[SerializeField] TextMeshProUGUI playerHealth;
 
 	float invuln_time = 0;
 
@@ -53,6 +56,7 @@ public class CharacterController2D : MonoBehaviour
 	private void Update()
 	{
 		if (invuln_time > 0) invuln_time -= Time.deltaTime;
+		playerHealth.text = $"Health: {health}";
 	}
 
 	private void FixedUpdate()
