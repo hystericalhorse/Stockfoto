@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] SubMenu titleUI;
     [SerializeField] SubMenu gameWinUI;
+    [SerializeField] SubMenu gameLoseUI;
     [SerializeField] SubMenu pauseUI;
     [SerializeField] SubMenu controlsUI;
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         START_GAME,
         PLAY_GAME,
         GAME_WIN,
+        GAME_LOSE,
         PAUSE_GAME,
     }
 
@@ -49,7 +51,8 @@ public class GameManager : MonoBehaviour
 	private void Start()
     {
         timer = 0;
-    }
+		Time.timeScale = Mathf.Epsilon;
+	}
 
     private void Update()
     {
@@ -69,10 +72,10 @@ public class GameManager : MonoBehaviour
                 state = State.PLAY_GAME;
                 break;
             case State.PLAY_GAME:
-                if (Input.GetKeyDown(KeyCode.Tab))
-                {
-                    SetPause();
-                }
+                //if (Input.GetKeyDown(KeyCode.Tab))
+                //{
+                //    SetPause();
+                //}
                 break;
             case State.GAME_WIN:
                 timer = 0;
@@ -83,6 +86,9 @@ public class GameManager : MonoBehaviour
                     state = State.TITLE;
                 }
                 break;
+            case State.GAME_LOSE:
+
+                break;
             case State.PAUSE_GAME:
                 //EventSystem.current.isFocused;
                 break;
@@ -91,10 +97,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
+	public void ResetGame()
+	{
+		//TODO
+
+		gameLoseUI.MakeInactive();
+		pauseUI.MakeInactive();
+		controlsUI.MakeInactive();
+		titleUI.MakeInactive();
+
+		Time.timeScale = 1;
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+	}
+
+	public void StartGame()
     {
         state = State.START_GAME;
-    }
+		Time.timeScale = 1;
+	}
 
     public void SetPause()
     {
@@ -116,6 +137,17 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
 		pauseUI.MakeInactive();
 		controlsUI.MakeInactive();
+	}
+
+    public void LoseGame()
+    {
+        state = State.GAME_LOSE;
+
+        gameLoseUI.MakeActive();
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		Time.timeScale = Mathf.Epsilon;
 	}
 
     public void QuitGame()

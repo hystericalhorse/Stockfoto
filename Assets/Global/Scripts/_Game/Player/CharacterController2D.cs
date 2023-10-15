@@ -140,7 +140,10 @@ public class CharacterController2D : MonoBehaviour
 
 		anim.SetTrigger("getDamaged");
 		health -= damage;
+		Debug.Log(health);
+
 		invuln_time = 1;
+		if (health < 0) GameManager.gameManager.LoseGame();
 	}
 
 	public void Pause(InputAction.CallbackContext context)
