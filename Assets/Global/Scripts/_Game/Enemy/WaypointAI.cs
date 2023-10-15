@@ -31,8 +31,9 @@ public class WaypointAI : MonoBehaviour {
     void Update() {
 		if (!alive) return;
 		Vector2 Direction = Vector2.zero;
-        if (TargetWaypoint == null) SetNewWaypointTarget();
-
+		if (Waypoints.Length < 1) return;
+		if (TargetWaypoint == null) SetNewWaypointTarget();
+        
         Direction.x = Mathf.Sign(TargetWaypoint.position.x - transform.position.x);
         float DX = Mathf.Abs(TargetWaypoint.position.x - transform.position.x);
         if (DX <= 0.25f) {
