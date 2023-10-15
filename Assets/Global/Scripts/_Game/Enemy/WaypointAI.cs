@@ -58,4 +58,22 @@ public class WaypointAI : MonoBehaviour {
         } while (Waypoint == TargetWaypoint);
         TargetWaypoint = Waypoint;
     }
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+        var player = collision.gameObject.GetComponent<CharacterController2D>();
+        if (player is not null)
+        {
+            player.TakeDamage((int) Random.Range(1, 3));
+        }
+	}
+
+	private void OnCollisionStay2D(Collision2D collision)
+	{
+		var player = collision.gameObject.GetComponent<CharacterController2D>();
+		if (player is not null)
+		{
+			player.TakeDamage((int)Random.Range(1, 3));
+		}
+	}
 }

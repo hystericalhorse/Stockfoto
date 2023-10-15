@@ -18,6 +18,13 @@ public class CharacterController2D : MonoBehaviour
 	
 	[SerializeField] LayerMask controllerLayer;
 
+	[Space]
+
+	[SerializeField] int health;
+	[SerializeField] int coins;
+
+	float invuln_time = 0;
+
 	Vector2 _input = Vector2.zero;
 	public Vector2 _translation = Vector2.zero;
 
@@ -35,12 +42,13 @@ public class CharacterController2D : MonoBehaviour
 		rb.freezeRotation = true;
 		rb.gravityScale = 0;
 
-		
+		health = 10;
+		coins = 0;
 	}
 
 	private void Update()
 	{
-		
+		if (invuln_time > 0) invuln_time -= Time.deltaTime;
 	}
 
 	private void FixedUpdate()
@@ -124,6 +132,15 @@ public class CharacterController2D : MonoBehaviour
 		jumping = true;
 		anim.SetTrigger("onJump");
 		_translation.y = 3;
+	}
+
+	public void TakeDamage(int damage)
+	{
+		if (invuln_time > 0) return;
+
+		anim.SetTrigger("getDamaged");
+		health -= damage;
+		invuln_time = 1;
 	}
 
 	public void Pause(InputAction.CallbackContext context)
