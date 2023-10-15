@@ -17,13 +17,17 @@ public class WaypointAI : MonoBehaviour {
     Transform TargetWaypoint = null;
     float Timer = .01f;
 
+    bool alive = true;
+
     void Start() {
         RB = GetComponent<Rigidbody2D>();
         spriterenderer = GetComponent<SpriteRenderer>();
+        alive = true;
     }
 
     void Update() {
-        Vector2 Direction = Vector2.zero;
+		if (!alive) return;
+		Vector2 Direction = Vector2.zero;
         if (TargetWaypoint == null) SetNewWaypointTarget();
 
         Direction.x = Mathf.Sign(TargetWaypoint.position.x - transform.position.x);
@@ -59,21 +63,50 @@ public class WaypointAI : MonoBehaviour {
         TargetWaypoint = Waypoint;
     }
 
+    public IEnumerator IDieNow()
+    {
+        animator.SetTrigger("onDeath");
+        alive = false;
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        RB.simulated = false;
+        yield return null;
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+
+        Destroy(this.gameObject);
+    }
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+        if (!alive) return;
         var player = collision.gameObject.GetComponent<CharacterController2D>();
         if (player is not null)
         {
             player.TakeDamage((int) Random.Range(1, 3));
         }
+
+		//var projectile = collision.gameObject.GetComponent<Projectile>();
+        //if (projectile is not null)
+        //{
+        //    StartCoroutine(IDieNow());
+        //    Destroy(projectile.gameObject);
+        //}
 	}
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
+		if (!alive) return;
 		var player = collision.gameObject.GetComponent<CharacterController2D>();
 		if (player is not null)
 		{
 			player.TakeDamage((int)Random.Range(1, 3));
 		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		var projectile = collision.gameObject.GetComponent<Projectile>();
+		if (projectile is not null) StartCoroutine(IDieNow());
+		Destroy(projectile.gameObject);
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
 using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 /// <summary>
 /// Handles movement and collision of a 2D character object.
@@ -22,6 +23,8 @@ public class CharacterController2D : MonoBehaviour
 
 	[SerializeField] int health;
 	[SerializeField] int coins;
+	[Space]
+	[SerializeField] GameObject projPrefab;
 
 	float invuln_time = 0;
 
@@ -115,6 +118,18 @@ public class CharacterController2D : MonoBehaviour
 
 	#endregion
 
+	public void TakeDamage(int damage)
+	{
+		if (invuln_time > 0) return;
+
+		anim.SetTrigger("getDamaged");
+		health -= damage;
+		Debug.Log(health);
+
+		invuln_time = 1;
+		if (health < 0) GameManager.gameManager.LoseGame();
+	}
+
 	#region Input Methods
 
 	public void Move(InputAction.CallbackContext context)
@@ -134,16 +149,15 @@ public class CharacterController2D : MonoBehaviour
 		_translation.y = 3;
 	}
 
-	public void TakeDamage(int damage)
+	public void Shoot(InputAction.CallbackContext context)
 	{
-		if (invuln_time > 0) return;
-
-		anim.SetTrigger("getDamaged");
-		health -= damage;
-		Debug.Log(health);
-
-		invuln_time = 1;
-		if (health < 0) GameManager.gameManager.LoseGame();
+		if (context.performed)
+		{
+			var go = Instantiate(projPrefab, transform.position, Quaternion.identity);
+			var proj = go.GetComponent<Projectile>();
+			proj.direction = (spr.flipX) ? Vector2.left : Vector2.right;
+			go.transform.rotation = Quaternion.Euler(proj.direction);
+		}
 	}
 
 	public void Pause(InputAction.CallbackContext context)

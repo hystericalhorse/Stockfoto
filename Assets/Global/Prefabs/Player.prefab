@@ -56,6 +56,9 @@ MonoBehaviour:
   controllerLayer:
     serializedVersion: 2
     m_Bits: 1
+  health: 0
+  coins: 0
+  projPrefab: {fileID: 7723106349247888172, guid: 69aec3e22f515504382d8ccd6a49213f, type: 3}
   _translation: {x: 0, y: 0}
 --- !u!50 &4890836743745291971
 Rigidbody2D:
@@ -208,6 +211,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4fd29c8a-e508-44d3-837c-f7d06ab5b70e
     m_ActionName: Gameplay/Pause[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9203341120043023236}
+        m_TargetAssemblyTypeName: CharacterController2D, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 77063319-e384-4303-9de2-60ec93a1492a
+    m_ActionName: Gameplay/Fire[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

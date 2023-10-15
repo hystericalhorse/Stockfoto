@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Global\Scripts\_Game\Player\CharacterController2D.cs" />
     <Compile Include="Assets\Global\Scripts\_Game\Player\GameObjective.cs" />
+    <Compile Include="Assets\Global\Scripts\_Game\Player\Projectile.cs" />
     <Compile Include="Assets\Global\Scripts\_Game\Enemy\WaypointAI.cs" />
     <Compile Include="Assets\External\PrettyHierarchy\Runtime\PrettyObject.cs" />
     <Compile Include="Assets\Global\Scripts\_Game\Player\GameManager.cs" />
