@@ -47,6 +47,8 @@ public class CharacterController2D : MonoBehaviour
 	{
 		GroundCheck(); // First
 
+		if (jumping) { col.size = new Vector2(2, 1); } else { col.size = new Vector2(1, 2); }
+
 		// TODO: Literally the rest of the character controller haha.
 		CalculateVerticalMotion();
 		CalculateHorizontalMotion();
@@ -118,7 +120,7 @@ public class CharacterController2D : MonoBehaviour
 	public void Jump(InputAction.CallbackContext context)
 	{
 		//TODO
-		if (jumping) return;
+		if (jumping || !context.performed) return;
 		jumping = true;
 		anim.SetTrigger("onJump");
 		_translation.y = 3;
