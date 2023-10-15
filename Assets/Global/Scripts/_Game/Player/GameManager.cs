@@ -139,6 +139,17 @@ public class GameManager : MonoBehaviour
 		controlsUI.MakeInactive();
 	}
 
+    public void WinGame()
+    {
+        state = State.GAME_WIN;
+
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		Time.timeScale = Mathf.Epsilon;
+
+		gameWinUI.MakeActive();
+	}
+
     public void LoseGame()
     {
         state = State.GAME_LOSE;
