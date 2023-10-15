@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -16,7 +15,9 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] CapsuleCollider2D col;
     [SerializeField] SpriteRenderer spr;
 	[SerializeField] Animator anim;
-	
+
+	[SerializeField] AudioSource crunch;
+
 	[SerializeField] LayerMask controllerLayer;
 
 	[Space]
@@ -153,6 +154,7 @@ public class CharacterController2D : MonoBehaviour
 	{
 		if (context.performed)
 		{
+			crunch.Play();
 			var go = Instantiate(projPrefab, transform.position, Quaternion.identity);
 			var proj = go.GetComponent<Projectile>();
 			proj.direction = (spr.flipX) ? Vector2.left : Vector2.right;

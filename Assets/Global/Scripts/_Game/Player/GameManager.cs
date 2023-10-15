@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] SubMenu pauseUI;
     [SerializeField] SubMenu controlsUI;
 
+    [SerializeField] AudioSource music;
+
     //[SerializeField] AudioSource gameMusic;
     //[SerializeField] AudioSource playerJump;
 
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
     {
         timer = 0;
 		Time.timeScale = Mathf.Epsilon;
+        music.Play();
 	}
 
     private void Update()
@@ -127,6 +130,8 @@ public class GameManager : MonoBehaviour
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
         Time.timeScale = Mathf.Epsilon;
+
+        music.Pause();
 	}
 
     public void ResumeGame()
@@ -137,6 +142,8 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
 		pauseUI.MakeInactive();
 		controlsUI.MakeInactive();
+
+		music.UnPause();
 	}
 
     public void WinGame()
@@ -155,6 +162,7 @@ public class GameManager : MonoBehaviour
         state = State.GAME_LOSE;
 
         gameLoseUI.MakeActive();
+        music.Stop();
 
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
