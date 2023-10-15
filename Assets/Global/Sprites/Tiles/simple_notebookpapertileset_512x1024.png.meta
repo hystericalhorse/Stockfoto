@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7eab684d90c23a648bffc384d1c1b003
+guid: d3197a42d4199a24db3fd1209565306c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_0
+      name: simple_notebookpapertileset_512x1024_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,20 +122,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -64, y: 33}
+      - - {x: -63, y: 35}
         - {x: -64, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 33}
+        - {x: 64, y: 35}
       tessellationDetail: 0
       bones: []
-      spriteID: 476f75077433cac4ea0381afdff34565
-      internalID: -1059016920
+      spriteID: ef75bf1cd62129642a4cd733afe4a9b2
+      internalID: -1076962253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_1
+      name: simple_notebookpapertileset_512x1024_1
       rect:
         serializedVersion: 2
         x: 128
@@ -147,20 +147,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -64, y: 33}
+      - - {x: -63, y: 35}
         - {x: -64, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 33}
+        - {x: 64, y: 35}
       tessellationDetail: 0
       bones: []
-      spriteID: 26f2631d61ed1a44faec5924cd987eda
-      internalID: 273173099
+      spriteID: 4b0d692039a814f43b82917d8c714c5f
+      internalID: -1728839216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_2
+      name: simple_notebookpapertileset_512x1024_2
       rect:
         serializedVersion: 2
         x: 256
@@ -172,20 +172,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -64, y: 33}
+      - - {x: -63, y: 35}
         - {x: -64, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 33}
+        - {x: 64, y: 35}
       tessellationDetail: 0
       bones: []
-      spriteID: 2049e5ff04817fb4283adc3f4c2efb7c
-      internalID: 1845809940
+      spriteID: 29a367225f7326842a37b9e3599a1759
+      internalID: -1948243864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_3
+      name: simple_notebookpapertileset_512x1024_3
       rect:
         serializedVersion: 2
         x: 384
@@ -197,20 +197,20 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -64, y: 33}
+      - - {x: -63, y: 35}
         - {x: -64, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 33}
+        - {x: 64, y: 35}
       tessellationDetail: 0
       bones: []
-      spriteID: b1710ff0c4efcdd449f467013b010a5f
-      internalID: -949335244
+      spriteID: 8e7a04f8674aac94d95d1053030f3922
+      internalID: 400537679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_4
+      name: simple_notebookpapertileset_512x1024_4
       rect:
         serializedVersion: 2
         x: 0
@@ -228,14 +228,14 @@ TextureImporter:
         - {x: 64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 4ea4f5225e043f740bcbbfddbad38f49
-      internalID: 2091901186
+      spriteID: 840d6cc0d2dddaa42aff549b7d669f68
+      internalID: -999191088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_5
+      name: simple_notebookpapertileset_512x1024_5
       rect:
         serializedVersion: 2
         x: 128
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b58a7d12a40ee54d899af8e4fd9378c
-      internalID: -707120500
+      spriteID: 1fcdef2b691dc694f90a86038dcd656a
+      internalID: -1534678872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_6
+      name: simple_notebookpapertileset_512x1024_6
       rect:
         serializedVersion: 2
         x: 256
@@ -270,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48411d9381fef6f49b0c83c070742590
-      internalID: 1941743558
+      spriteID: ffce1d194329f3c49996543a8f4b036b
+      internalID: 1443091298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_7
+      name: simple_notebookpapertileset_512x1024_7
       rect:
         serializedVersion: 2
         x: 384
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d69507af1252f94789283d186afc87f
-      internalID: -2093603370
+      spriteID: e02ad604d9bf9bc448c4bae6d42c7465
+      internalID: -186145054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_8
+      name: simple_notebookpapertileset_512x1024_8
       rect:
         serializedVersion: 2
         x: 0
@@ -312,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bb30d3bad1d9841969b3fddd8ee69e
-      internalID: 317913914
+      spriteID: bbc25e3cf2607094e8c620ab4c9f9d44
+      internalID: 434155074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_9
+      name: simple_notebookpapertileset_512x1024_9
       rect:
         serializedVersion: 2
         x: 128
@@ -333,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8cb288f6b79c447898b6a4cca775e6
-      internalID: 511806337
+      spriteID: fd7f2e07b44a70c4db8cd2be034e2cf6
+      internalID: 44919537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_10
+      name: simple_notebookpapertileset_512x1024_10
       rect:
         serializedVersion: 2
         x: 256
@@ -354,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55c20dd2dae0f8468bdfdd83c57eb85
-      internalID: 1479409869
+      spriteID: 97d3ec970e89f3547a251d16a8795082
+      internalID: 1911457252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_11
+      name: simple_notebookpapertileset_512x1024_11
       rect:
         serializedVersion: 2
         x: 384
@@ -375,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ad8ae72b9221849a8b4b735b203137
-      internalID: -1134236633
+      spriteID: 6ec5580797955924ba8d384213600a7a
+      internalID: -1651655183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_12
+      name: simple_notebookpapertileset_512x1024_12
       rect:
         serializedVersion: 2
         x: 0
@@ -396,14 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516f369385e6722429ced0f1ad8c6813
-      internalID: 2027029409
+      spriteID: e5926ff23457f2c45b91b4594cfc1452
+      internalID: 751151520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_13
+      name: simple_notebookpapertileset_512x1024_13
       rect:
         serializedVersion: 2
         x: 128
@@ -417,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5096fcc651dfe274a990f5e0419e93f1
-      internalID: 1385510098
+      spriteID: 7df6349805afb4543a4bddb107d3baf0
+      internalID: -1511680164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_14
+      name: simple_notebookpapertileset_512x1024_14
       rect:
         serializedVersion: 2
         x: 256
@@ -438,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5619d03d2a10e4749a2c6aa30b47f1fb
-      internalID: 73346822
+      spriteID: cf25aba71f9e79f4b952e83507c3a44d
+      internalID: 1426566506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_15
+      name: simple_notebookpapertileset_512x1024_15
       rect:
         serializedVersion: 2
         x: 384
@@ -459,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5227417a5c582354c8c2ea5ab491bdb8
-      internalID: -1001998413
+      spriteID: 7490c50420d132841965b0d07ba113a7
+      internalID: -121073933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_16
+      name: simple_notebookpapertileset_512x1024_16
       rect:
         serializedVersion: 2
         x: 0
@@ -480,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21b735561c8723c4c95c0a66efa58076
-      internalID: -984256791
+      spriteID: 85940807c923b5f4ca54fcec2952bf80
+      internalID: 1215817290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_17
+      name: simple_notebookpapertileset_512x1024_17
       rect:
         serializedVersion: 2
         x: 128
@@ -501,14 +501,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 209937f5aef14a6429428f82e84768c1
-      internalID: -1408643404
+      spriteID: 8c1c52e629810b1408fdc1c5ac08c67c
+      internalID: 251336576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_18
+      name: simple_notebookpapertileset_512x1024_18
       rect:
         serializedVersion: 2
         x: 256
@@ -522,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a1d4cfedc94ab8458e19323db78ef04
-      internalID: 1865224294
+      spriteID: 6ce5c9a23babccf40b5120ea1a855925
+      internalID: 2062652340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_19
+      name: simple_notebookpapertileset_512x1024_19
       rect:
         serializedVersion: 2
         x: 384
@@ -543,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21148878497cad489af7f282de5dc80
-      internalID: 937785684
+      spriteID: 8fd90535a06d77b4588ab06c3717e2a6
+      internalID: -84473136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_20
+      name: simple_notebookpapertileset_512x1024_20
       rect:
         serializedVersion: 2
         x: 0
@@ -564,14 +564,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a786a4ef10c15249ba697cb4e4ef90e
-      internalID: 95257372
+      spriteID: 2ac7f05e1d550164a95b8268bcbc96ce
+      internalID: 2134853946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_21
+      name: simple_notebookpapertileset_512x1024_21
       rect:
         serializedVersion: 2
         x: 128
@@ -585,14 +585,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6515038e7b02c1c4ba360ffe6214d353
-      internalID: -415258432
+      spriteID: bb097dea7d3f50542a81b294ada8b906
+      internalID: 691359096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_22
+      name: simple_notebookpapertileset_512x1024_22
       rect:
         serializedVersion: 2
         x: 256
@@ -606,14 +606,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 143e8c8103857e04e88dac3c1d85db75
-      internalID: -1394003782
+      spriteID: 8435a2091e8ac0340a2c73c8a6bd3be3
+      internalID: -172600453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_23
+      name: simple_notebookpapertileset_512x1024_23
       rect:
         serializedVersion: 2
         x: 384
@@ -627,14 +627,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f150265bd59e09b4c84ddbad56f9b589
-      internalID: -845853097
+      spriteID: 0379b6513d2810e429855522316fc579
+      internalID: 637542594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_24
+      name: simple_notebookpapertileset_512x1024_24
       rect:
         serializedVersion: 2
         x: 0
@@ -648,14 +648,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca36f7e1a043adc4f83c1460f50a41b0
-      internalID: 283986466
+      spriteID: cf30475710b27a645957b7a0b870d458
+      internalID: 1237295559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_25
+      name: simple_notebookpapertileset_512x1024_25
       rect:
         serializedVersion: 2
         x: 128
@@ -669,14 +669,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eda3bb155dfb39c429ba7acfaf2b0b57
-      internalID: -1865204389
+      spriteID: 2b41ee58e34d12742b1857b4a9f1226d
+      internalID: 2123232388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_26
+      name: simple_notebookpapertileset_512x1024_26
       rect:
         serializedVersion: 2
         x: 256
@@ -690,14 +690,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b801c4b8e5d77245b5dab6cf623c515
-      internalID: -871076242
+      spriteID: 9625886c55694374f8aa32f3355cf603
+      internalID: 372810768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_27
+      name: simple_notebookpapertileset_512x1024_27
       rect:
         serializedVersion: 2
         x: 384
@@ -711,14 +711,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f479b7be1f5294548ad572a29ffb286a
-      internalID: -886366461
+      spriteID: c845f2cfb17a4d34d8168d55fb8031d3
+      internalID: 1482979041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_28
+      name: simple_notebookpapertileset_512x1024_28
       rect:
         serializedVersion: 2
         x: 0
@@ -732,14 +732,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 115931ea520298542989592dd7036b8f
-      internalID: 1499808639
+      spriteID: 73f9deb26a5564f4184b96953ed2cec6
+      internalID: -1573177973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_29
+      name: simple_notebookpapertileset_512x1024_29
       rect:
         serializedVersion: 2
         x: 128
@@ -753,14 +753,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7391a5d8f77361245902385a150e633d
-      internalID: 441209004
+      spriteID: 9e3c87cb9f3d5244f855bee565808c91
+      internalID: 430828353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_30
+      name: simple_notebookpapertileset_512x1024_30
       rect:
         serializedVersion: 2
         x: 256
@@ -774,14 +774,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cce51d7e4efed84e9b66a0ab6437a13
-      internalID: 2139184658
+      spriteID: 658bc833b32ca354596538f1ff44a2ef
+      internalID: 820785499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simple_notebookpapertileset_512x1024_crumpled_31
+      name: simple_notebookpapertileset_512x1024_31
       rect:
         serializedVersion: 2
         x: 384
@@ -795,8 +795,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7aafd57f85b60534c97900ff86fc88f2
-      internalID: -1021785481
+      spriteID: d9a90d0db4971564aa4cecdd947df15b
+      internalID: 2062024169
       vertices: []
       indices: 
       edges: []
@@ -812,38 +812,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      simple_notebookpapertileset_512x1024_crumpled_0: -1059016920
-      simple_notebookpapertileset_512x1024_crumpled_1: 273173099
-      simple_notebookpapertileset_512x1024_crumpled_10: 1479409869
-      simple_notebookpapertileset_512x1024_crumpled_11: -1134236633
-      simple_notebookpapertileset_512x1024_crumpled_12: 2027029409
-      simple_notebookpapertileset_512x1024_crumpled_13: 1385510098
-      simple_notebookpapertileset_512x1024_crumpled_14: 73346822
-      simple_notebookpapertileset_512x1024_crumpled_15: -1001998413
-      simple_notebookpapertileset_512x1024_crumpled_16: -984256791
-      simple_notebookpapertileset_512x1024_crumpled_17: -1408643404
-      simple_notebookpapertileset_512x1024_crumpled_18: 1865224294
-      simple_notebookpapertileset_512x1024_crumpled_19: 937785684
-      simple_notebookpapertileset_512x1024_crumpled_2: 1845809940
-      simple_notebookpapertileset_512x1024_crumpled_20: 95257372
-      simple_notebookpapertileset_512x1024_crumpled_21: -415258432
-      simple_notebookpapertileset_512x1024_crumpled_22: -1394003782
-      simple_notebookpapertileset_512x1024_crumpled_23: -845853097
-      simple_notebookpapertileset_512x1024_crumpled_24: 283986466
-      simple_notebookpapertileset_512x1024_crumpled_25: -1865204389
-      simple_notebookpapertileset_512x1024_crumpled_26: -871076242
-      simple_notebookpapertileset_512x1024_crumpled_27: -886366461
-      simple_notebookpapertileset_512x1024_crumpled_28: 1499808639
-      simple_notebookpapertileset_512x1024_crumpled_29: 441209004
-      simple_notebookpapertileset_512x1024_crumpled_3: -949335244
-      simple_notebookpapertileset_512x1024_crumpled_30: 2139184658
-      simple_notebookpapertileset_512x1024_crumpled_31: -1021785481
-      simple_notebookpapertileset_512x1024_crumpled_4: 2091901186
-      simple_notebookpapertileset_512x1024_crumpled_5: -707120500
-      simple_notebookpapertileset_512x1024_crumpled_6: 1941743558
-      simple_notebookpapertileset_512x1024_crumpled_7: -2093603370
-      simple_notebookpapertileset_512x1024_crumpled_8: 317913914
-      simple_notebookpapertileset_512x1024_crumpled_9: 511806337
+      simple_notebookpapertileset_512x1024_0: -1076962253
+      simple_notebookpapertileset_512x1024_1: -1728839216
+      simple_notebookpapertileset_512x1024_10: 1911457252
+      simple_notebookpapertileset_512x1024_11: -1651655183
+      simple_notebookpapertileset_512x1024_12: 751151520
+      simple_notebookpapertileset_512x1024_13: -1511680164
+      simple_notebookpapertileset_512x1024_14: 1426566506
+      simple_notebookpapertileset_512x1024_15: -121073933
+      simple_notebookpapertileset_512x1024_16: 1215817290
+      simple_notebookpapertileset_512x1024_17: 251336576
+      simple_notebookpapertileset_512x1024_18: 2062652340
+      simple_notebookpapertileset_512x1024_19: -84473136
+      simple_notebookpapertileset_512x1024_2: -1948243864
+      simple_notebookpapertileset_512x1024_20: 2134853946
+      simple_notebookpapertileset_512x1024_21: 691359096
+      simple_notebookpapertileset_512x1024_22: -172600453
+      simple_notebookpapertileset_512x1024_23: 637542594
+      simple_notebookpapertileset_512x1024_24: 1237295559
+      simple_notebookpapertileset_512x1024_25: 2123232388
+      simple_notebookpapertileset_512x1024_26: 372810768
+      simple_notebookpapertileset_512x1024_27: 1482979041
+      simple_notebookpapertileset_512x1024_28: -1573177973
+      simple_notebookpapertileset_512x1024_29: 430828353
+      simple_notebookpapertileset_512x1024_3: 400537679
+      simple_notebookpapertileset_512x1024_30: 820785499
+      simple_notebookpapertileset_512x1024_31: 2062024169
+      simple_notebookpapertileset_512x1024_4: -999191088
+      simple_notebookpapertileset_512x1024_5: -1534678872
+      simple_notebookpapertileset_512x1024_6: 1443091298
+      simple_notebookpapertileset_512x1024_7: -186145054
+      simple_notebookpapertileset_512x1024_8: 434155074
+      simple_notebookpapertileset_512x1024_9: 44919537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

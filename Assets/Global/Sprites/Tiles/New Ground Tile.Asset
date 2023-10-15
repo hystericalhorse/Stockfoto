@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3eb2071d36023d469cbb04f273724d1, type: 3}
   m_Name: New Ground Tile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 273173099, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
+  m_Sprite: {fileID: -1076962253, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -35,8 +35,8 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 1
   tiles:
-  - {fileID: -1059016920, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
-  - {fileID: 273173099, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
-  - {fileID: 1845809940, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
-  - {fileID: -949335244, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
-  ground: {fileID: 2091901186, guid: 7eab684d90c23a648bffc384d1c1b003, type: 3}
+  - {fileID: -1076962253, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
+  - {fileID: -1728839216, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
+  - {fileID: -1948243864, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
+  - {fileID: 400537679, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
+  ground: {fileID: -999191088, guid: d3197a42d4199a24db3fd1209565306c, type: 3}
